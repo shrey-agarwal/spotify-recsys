@@ -1,0 +1,10 @@
+/mpd
+/project/data
+*.pkl
+*.msgpack
+/project/logs
+/project/gcloud/autoencoder/v2/annoy
+/project/gcloud/autoencoder/v2/annoy-dim-256-tree-100-mincount-10
+/project/gcloud/autoencoder/v2/submission.csv
+/challenge/challenge_set.json
+/challenge/sample_submission.csv

@@ -1,0 +1,90 @@
+Namespace(aug_step=-1, batch_size=128, constrained=False, drop_prob=0.2, gpu_ids='0', hidden_layers='1024,256,256,128', logdir='ncae', lr=0.01, noise_prob=0.0, non_linearity_type='selu', num_epochs=30, optimizer='momentum', path_to_eval_data='', path_to_train_data='', skip_last_layer_nl=False, summary_frequency=1000, weight_decay=0.01)
+GPU is available.
+Loading training data
+Finished reading .data file
+Data loaded
+Total playlists found: 1000000
+Vector dim: 229874
+Loading eval data
+/home/v18saboo/spotify/autoencoder/model.py:68: UserWarning: nn.init.xavier_uniform is now deprecated in favor of nn.init.xavier_uniform_.
+  weight_init.xavier_uniform(w)
+/home/v18saboo/spotify/autoencoder/model.py:80: UserWarning: nn.init.xavier_uniform is now deprecated in favor of nn.init.xavier_uniform_.
+  weight_init.xavier_uniform(w)
+******************************
+******************************
+[229874, 1024, 256, 256, 128]
+Dropout drop probability: 0.2
+Encoder pass:
+torch.Size([1024, 229874])
+torch.Size([256, 1024])
+torch.Size([256, 256])
+torch.Size([128, 256])
+torch.Size([128])
+Decoder pass:
+torch.Size([256, 128])
+torch.Size([256])
+torch.Size([256, 256])
+torch.Size([256])
+torch.Size([1024, 256])
+torch.Size([1024])
+torch.Size([229874, 1024])
+torch.Size([229874])
+******************************
+******************************
+######################################################
+######################################################
+############# AutoEncoder Model: #####################
+AutoEncoder(
+  (drop): Dropout(p=0.2)
+  (encode_w): ParameterList(
+      (0): Parameter containing: [torch.FloatTensor of size 1024x229874]
+      (1): Parameter containing: [torch.FloatTensor of size 256x1024]
+      (2): Parameter containing: [torch.FloatTensor of size 256x256]
+      (3): Parameter containing: [torch.FloatTensor of size 128x256]
+    
+  )
+  (encode_b): ParameterList(
+      (0): Parameter containing: [torch.FloatTensor of size 1024]
+      (1): Parameter containing: [torch.FloatTensor of size 256]
+      (2): Parameter containing: [torch.FloatTensor of size 256]
+      (3): Parameter containing: [torch.FloatTensor of size 128]
+    
+  )
+  (decode_w): ParameterList(
+      (0): Parameter containing: [torch.FloatTensor of size 256x128]
+      (1): Parameter containing: [torch.FloatTensor of size 256x256]
+      (2): Parameter containing: [torch.FloatTensor of size 1024x256]
+      (3): Parameter containing: [torch.FloatTensor of size 229874x1024]
+    
+  )
+  (decode_b): ParameterList(
+      (0): Parameter containing: [torch.FloatTensor of size 256]
+      (1): Parameter containing: [torch.FloatTensor of size 256]
+      (2): Parameter containing: [torch.FloatTensor of size 1024]
+      (3): Parameter containing: [torch.FloatTensor of size 229874]
+    
+  )
+)
+######################################################
+######################################################
+Using GPUs: [0]
+Doing epoch 0 of 30
+Batch [0,     0] RMSE: 1.0245229
+Batch [0,  1000] RMSE: 0.4571835
+Batch [0,  2000] RMSE: 0.2021673
+Batch [0,  3000] RMSE: 0.2053016
+Batch [0,  4000] RMSE: 0.1981468
+Batch [0,  5000] RMSE: 0.2009732
+Batch [0,  6000] RMSE: 0.1979830
+Batch [0,  7000] RMSE: 0.1964014
+Total epoch 0 finished in 3222.759706258774 seconds with TRAINING RMSE loss: 0.24836133681325318
+0it [00:00, ?it/s]1it [00:04,  4.35s/it]2it [00:08,  4.26s/it]3it [00:12,  4.21s/it]4it [00:16,  4.14s/it]5it [00:20,  4.10s/it]6it [00:24,  4.09s/it]7it [00:28,  4.07s/it]8it [00:32,  4.06s/it]9it [00:36,  4.04s/it]10it [00:40,  4.03s/it]11it [00:44,  4.03s/it]12it [00:48,  4.03s/it]13it [00:52,  4.03s/it]14it [00:56,  4.03s/it]15it [01:00,  4.03s/it]16it [01:04,  4.03s/it]17it [01:08,  4.04s/it]18it [01:12,  4.04s/it]19it [01:16,  4.04s/it]20it [01:20,  4.04s/it]21it [01:24,  4.04s/it]22it [01:28,  4.04s/it]23it [01:33,  4.04s/it]24it [01:37,  4.05s/it]25it [01:41,  4.05s/it]26it [01:45,  4.05s/it]27it [01:49,  4.05s/it]28it [01:53,  4.05s/it]29it [01:57,  4.05s/it]30it [02:01,  4.05s/it]31it [02:05,  4.05s/it]32it [02:09,  4.05s/it]33it [02:13,  4.05s/it]34it [02:17,  4.05s/it]35it [02:21,  4.05s/it]36it [02:26,  4.06s/it]37it [02:30,  4.06s/it]38it [02:34,  4.06s/it]39it [02:38,  4.06s/it]40it [02:42,  4.06s/it]41it [02:46,  4.06s/it]42it [02:50,  4.06s/it]43it [02:54,  4.06s/it]44it [02:58,  4.06s/it]45it [03:02,  4.06s/it]46it [03:06,  4.06s/it]47it [03:10,  4.06s/it]48it [03:14,  4.06s/it]49it [03:18,  4.06s/it]50it [03:22,  4.06s/it]51it [03:27,  4.06s/it]52it [03:31,  4.06s/it]53it [03:35,  4.06s/it]54it [03:39,  4.06s/it]55it [03:43,  4.06s/it]56it [03:47,  4.06s/it]57it [03:51,  4.06s/it]58it [03:55,  4.06s/it]59it [03:59,  4.06s/it]60it [04:03,  4.07s/it]61it [04:08,  4.07s/it]62it [04:12,  4.07s/it]63it [04:16,  4.07s/it]64it [04:20,  4.07s/it]65it [04:24,  4.07s/it]66it [04:28,  4.07s/it]67it [04:32,  4.07s/it]68it [04:36,  4.07s/it]69it [04:40,  4.07s/it]70it [04:44,  4.07s/it]71it [04:49,  4.07s/it]72it [04:53,  4.07s/it]73it [04:57,  4.07s/it]74it [05:01,  4.07s/it]75it [05:05,  4.07s/it]76it [05:09,  4.07s/it]77it [05:13,  4.07s/it]78it [05:17,  4.07s/it]
+Epoch: 0 : TESTING LOSS:: DCG: 0.0, NDCG: 0.0, HR: 0.0
+Saving model to ncae/model.epoch_0
+Doing epoch 1 of 30
+Batch [1,     0] RMSE: 0.1966341
+Batch [1,  1000] RMSE: 0.2028271
+Batch [1,  2000] RMSE: 0.1985502
+Batch [1,  3000] RMSE: 0.2032982
+Batch [1,  4000] RMSE: 0.1964538
+Batch [1,  5000] RMSE: 0.1928609
